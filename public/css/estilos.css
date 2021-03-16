@@ -1,0 +1,151 @@
+.boton-crear-nuevo{
+    margin-right: 100px;
+}
+
+.bold{
+    text-transform: bold;
+}
+.border-izq{
+    border-left: 2px solid white;
+}
+
+.banner{
+    display: grid;
+    overflow: hidden;
+
+    min-height: 150px;
+    background: linear-gradient(85deg, #de4423, #de2358);
+    color: #ffffff;
+    padding: 20px 0 20px 20px;
+
+    grid-template-columns: repeat(4,1fr) minmax(50px, 100px);
+    grid-template-rows: minmax(50px,auto);
+
+    border-radius: 20px;
+}
+
+.banner .item{
+    overflow: hidden;
+    display: grid;
+
+    grid-template-columns: minmax(30px, 60px) 1fr;
+    grid-template-rows: 25px 20px repeat(2, minmax(20px, auto));
+
+    padding: 0 15px;
+    grid-template-areas: "icono titulo"
+                         "icono subtitulo"
+                         "numero numero"
+                         "totales totales";
+}
+
+
+.banner .item .icono{
+    grid-area: icono;
+    font-size: 42px;
+    padding-top: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.banner .item .title{
+    grid-area: titulo;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+.banner .item .subtitle{
+    grid-area: subtitulo;
+    text-align: right;
+
+}
+.banner .flecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.banner .item .numero{
+    grid-area: numero;
+    font-weight: bold;
+    font-size: 40px;
+}
+.banner .item .totales{
+    grid-area: totales;
+}
+
+.totales .contenedor{
+    border-radius: 30px;
+    padding: 0 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    display: inline-block;
+    float: right;
+}
+
+
+
+.grilla-acuerdo{
+    display: grid;
+    gap: 40px;
+
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-rows: repeat(3, minmax(100px, auto));
+
+    grid-template-areas:"facturacion    objetivos"
+                        "publicaciones  objetivos"
+                        "items          objetivos";
+}
+
+.grilla-acuerdo .facturacion{
+    grid-area: facturacion;
+}
+
+
+
+.facturacion .grilla-facturacion{
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns:  minmax(100px, 150px) repeat(2, 1fr);
+    grid-template-rows: repeat(2,minmax(50px,auto));
+
+    grid-template-areas: "periodo desde hasta"
+                         "metodo input input";
+}
+
+.sector{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.grilla-acuerdo .input{
+    grid-area: input;
+}
+
+.grilla-acuerdo .publicaciones{
+    grid-area: publicaciones;
+}
+
+.publicaciones .grilla-publicaciones{
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: minmax(100px, 150px) 0.5fr;
+    grid-template-rows: repeat(2,minmax(50px,auto));
+
+}
+
+.grilla-acuerdo .items{
+    grid-area: items;
+}
+.grilla-acuerdo .objetivos{
+    grid-area: objetivos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
