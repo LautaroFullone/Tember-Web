@@ -23,4 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->group(function () {
     Route::get('/', 'WebController@index')->name('index');
     Route::get('/acuerdo-negocio', 'WebController@showAcuerdoNegocio')->name('acuerdo-negocio');
+
+    Route::get('/crear-acuerdo', 'AdminController@showCreateAcuerdo')->name('acuerdo.create');
+    Route::post('/guardar-acuerdo', 'AcuerdoNegocioController@save')->name('acuerdo.save');
+
+
 });
