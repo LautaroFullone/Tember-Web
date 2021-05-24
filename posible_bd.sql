@@ -56,20 +56,17 @@ create table items_x_acuerdo(
     fecha date not null,
     
     constraint pk_itemsx_acuerdo primary key (id),
-	constraint fk_items_acuerdo foreign key (id_acuerdo) references acuerdos_de_negocio(id),
-	constraint fk_acuerdo_items foreign key (id_item) references items(id)
+	constraint fk_items_acuerdo foreign key (idAcuerdo) references acuerdos_de_negocio(id),
+	constraint fk_acuerdo_items foreign key (idItem) references items(id)
     );
     
-
-
 create table facturaciones(
 	id int auto_increment,
     metodo varchar(20) not null,
 	desde date,
 	hasta date,
-    id_acuerdo int,
+    idAcuerdo int,
 
     constraint pk_facturacion primary key (id),
-    constraint fk_acuerdo_facturacion foreign key (id_acuerdo) references acuerdos_de_negocio(id),
-    constraint unq_acuerdo unique(id_acuerdo)
+    constraint fk_acuerdo_faacturacion foreign key (idAcuerdo) references acuerdos_de_negocio(id),
     );
